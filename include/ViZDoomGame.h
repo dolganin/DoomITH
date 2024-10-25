@@ -118,8 +118,11 @@ namespace vizdoom {
         void setLivingReward(double livingReward);
         double getDeathPenalty();
         void setDeathPenalty(double deathPenalty);
+        void setKillingReward(double killingReward);
+        double getKillingReward();
         double getLastReward();
         double getTotalReward();
+        
 
 
         /* General game getters and setters */
@@ -242,6 +245,7 @@ namespace vizdoom {
 
         double livingReward;
         double deathPenalty;
+        double killingReward;
 
     private:
 

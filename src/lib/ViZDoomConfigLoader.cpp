@@ -605,6 +605,10 @@ namespace vizdoom {
                     this->game->setDeathPenalty(b::lexical_cast<double>(val));
                     continue;
                 }
+                if (key == "killing_reward" || key == "killingreward"){
+                    this->game->setKillingReward(b::lexical_cast<double>(val));
+                    continue;
+                }
             }
             catch (b::bad_lexical_cast &) {
                 std::cerr << "WARNING! Loading config from: \"" << filePath << "\". Float value expected instead of: " <<

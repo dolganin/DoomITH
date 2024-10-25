@@ -210,6 +210,7 @@ namespace vizdoom {
         int liveTime = this->doomController->getMapLastTic() - this->lastMapTic;
         reward += (liveTime > 0 ? liveTime : 0) * this->livingReward;
         if (this->doomController->isPlayerDead()) reward -= this->deathPenalty;
+        reward += this->getGameVariable(KILLCOUNT)*this->killingReward;
 
         this->lastMapReward = mapReward;
         this->summaryReward += reward;
@@ -502,6 +503,10 @@ namespace vizdoom {
     double DoomGame::getDeathPenalty() { return this->deathPenalty; }
 
     void DoomGame::setDeathPenalty(double deathPenalty) { this->deathPenalty = deathPenalty; }
+
+    void DoomGame::setKillingReward(double killingReward) { this->killingReward = killingReward; }
+
+    double DoomGame::getKillingReward(){return this->killingReward; }
 
     double DoomGame::getLastReward() {
         if (!this->isRunning()) throw ViZDoomIsNotRunningException();
