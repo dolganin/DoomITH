@@ -20,6 +20,7 @@ option(BUILD_ENGINE "Build ViZDoom Engine (required to build Python package)" ON
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_LINK)
+set(CMAKE_PREFIX_PATH "/usr/lib/x86_64-linux-gnu/cmake/boost_thread-1.74.0")
 if(COMMAND cmake_policy)
     cmake_policy(SET CMP0003 NEW)
 endif()

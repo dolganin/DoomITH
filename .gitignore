@@ -1,6 +1,7 @@
 # CMake and building output
 **/bin
 **/build
+**/test
 ViZDoomVersion.h
 viz_version.h
 Makefile
