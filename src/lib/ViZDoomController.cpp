@@ -281,7 +281,7 @@ namespace vizdoom {
     }
 
     bool DoomController::isTicPossible() {
-        return !(this->isMapEnded() || this->isMapTimeoutReached()) && this->isPlayerDead();
+        return !(this->isMapEnded() || this->isMapTimeoutReached());
     }
 
     void DoomController::tic(bool update) {
